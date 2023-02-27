@@ -1,0 +1,133 @@
+<!doctype html>
+<html class="no-js" lang="en"><!-- specify language: http://www.w3.org/TR/html401/struct/dirlang.html#h-8.1 -->
+<head prefix="og: http://ogp.me/ns#"><!-- enable Open Graph: http://ogp.me/ -->
+
+    <!-- charset & http-equiv may be set via response header: https://github.com/h5bp/html5-boilerplate/blob/master/doc/html.md#x-ua-compatible -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>WebMode</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url"   content="">
+    <!-- optionally add more Open Graph metadata: http://ogp.me/#metadata -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+    <!-- Enable styling differentation between JavaScript and non-JavaScript enabled browsers -->
+    <script>(function (e) { e.className = e.className.replace('no-js', 'js'); }(document.documentElement));</script>
+
+    <!-- Include stylesheets here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
+<style media="screen">
+  .a11y-sr-only,
+  .a11y-kb-only {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+  }
+
+  .a11y-kb-only:active,
+  .a11y-kb-only:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+  }
+ </style>
+</head>
+<body>
+     <header role="banner" class="site-header">
+        <a class="site-logo" href="/" rel="home" title="to homepage">
+            <!-- link to home: http://microformats.org/wiki/rel-home -->
+            <img alt="webmode logo"
+              style="display:inline; vertical-align: middle"
+              src="static/img/webmode_logo.svg"
+              onerror="this.src='a11y-boilerplate.png;'"
+              width="100" height="100"
+                    />
+                <!-- vector image with bitmap fallback: https://twitter.com/scottjehl/status/369190249437483008 -->
+                <!-- specify image dimensions for performance: http://www.feedthebot.com/pagespeed/image-dimensions.html -->
+            <h1 class="fluid-type" style="display: inline-block;vertical-align: middle">Webmode</h1>
+        </a>
+
+        <!-- Quick menu (skipnav) to directly jump to specific sections: http://www.jimthatcher.com/skipnav.htm -->
+        <nav class="site-header-quick-menu">
+            <h2 class="a11y-sr-only">Quick menu</h2>
+            <ul class="flat-list a11y-sr-only">
+                <li><a class="menu-link a11y-kb-only" href="#content">Jump to content</a></li>
+                <li><a class="menu-link a11y-kb-only" href="#main-menu">Jump to main menu</a></li>
+                <li><a class="menu-link a11y-kb-only" href="#search">Jump to search</a></li>
+                <li><a class="menu-link a11y-kb-only" href="#user">Jump to user menu</a></li>
+            </ul>
+        </nav>
+        <nav class="site-header-main-menu">
+            <ul class="flx">
+              <li><a class="menu-link" href="#content">How it works</a></li>
+              <li><a class="menu-link" href="#user">Log In</a></li>
+              <li><a class="menu-link" href="#Legal">Legal</a></li>
+              <li><!-- Mark search controls for enhanced a11y: http://www.w3.org/TR/wai-aria/roles#search -->
+                <div role="search" class="search-menu">
+                  <a id="search" rel="search" href="https://example.com/search">
+                    <span class="icon-search"></span>
+                    <span class="a11y-sr-only">Search</span>
+                  </a>
+                  <form method="GET" action="https://www.example.com/search" class="search-menu-form flx">
+                    <label>
+                      <span class="a11y-sr-only">Keywords</span>
+                      <input type="search" name="q" placeholder="keyword(s)" />
+                    </label>
+                    <button>
+                      <span class="icon-search"></span>
+                      <span class="a11y-sr-only">Search on example.com</span>
+                    </button>
+                  </form>
+                </div>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <main id="content" role="main" tabindex="-1">
+        <!-- tabindex fixes focus issue, alternatively use generic script: http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/ -->
+
+        <!-- @todo: add nav[role="navigation"] as TOC -->
+        
+        <p class="intro">WebMode transpiles modern JavaScript with Babel and loads styles from Sass/PostCSS.
+        It's opinionated yet minimalist, adding no frameworks or libraries. Mode also
+        copies static assets such as images and <a href="static/documents/mode.pdf">
+        documents</a> with a dedicated /static directory - no need to import them
+        in your JS if you don't need to.
+    
+              <article class="block">
+      <h2>How to use</h2>
+        <p><code>npm start</code> to run in dev mode.
+        <br><code>npm run build</code> for a production build into a /dist directory, with a main.css stylesheet.
+    </article>
+    </main>
+
+
+    <footer role="contentinfo" class="site-footer flx">
+      
+       <div style="">A project by <a href="http://korvin.org">Korvin M Media</a></div>
+      <div><a href="http://webpack.js.org"><img alt="webmode logo"
+              style="display:inline; vertical-align: middle"
+              src="static/img/webmode_logo.svg"
+              onerror="this.src='a11y-boilerplate.png;'"
+              width="62" height="62"
+                    /></a>
+      </div>
+      <div style=""><a href="https://github.com/KorvinM/webmode/">Source code on Github</a></div>
+    </footer>
+
+</body>
+</html>

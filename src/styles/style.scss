@@ -1,0 +1,135 @@
+body{
+  background: #2a2729;
+  color: whitesmoke;
+}
+@import "normalise.scss";
+
+body{
+  margin-top:0.62em;
+  font-size: 1em;
+  color: #fafaf3;}
+h1, h2{margin:0 auto;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.1em;
+  }
+
+
+h1{
+  font-size: clamp(1rem, 8vw - 2rem, 3rem);
+    color: #272727;
+
+
+}
+.block{
+  font-size: clamp(1rem, 8vw - 2rem, 1.62rem);
+  background-color: #361953;
+  width:93%;
+  margin: 0.38em auto 0.38em;
+  padding: 0.38em 0.62em 0.24em 1em;
+  border-radius: 3.8em 6.2em 0 2.4em;}
+
+code {
+  background-color:rgba(0,0,0,0.38);
+  padding: 0.24em;
+  user-select: none;
+  font-size: 0.93rem;}
+a{text-decoration:none; transition: all 0.38s;
+    color: #e3be3f;}
+a:hover{text-decoration:none;color: #ffe792;}
+footer.main-footer{
+    line-height: 1.4;
+    margin: 1em auto 0;
+    border-radius: 0.6em;
+    width:93%;
+    padding:0.38em 1em 0;
+    background: #1c146d;}
+
+.note {
+  font-size:0.93em;
+  text-align:right;}
+
+.flx{display:flex; align-items: center;
+    justify-content: space-around;}
+
+@media only screen and (min-width: 38em) {
+
+  body{font-size: 1.06em;}
+  div.block{
+    width:88%;
+    padding-left: 2em;
+    padding: 0.62em 1em 0.24em 2em;
+    font-size: 1.14rem;
+}
+  .lead{font-size: 1.24em;}
+}
+@media only screen and (min-width: 62em) {
+  div.block{width:62%;
+    font-size: 1.16rem;
+}
+  h1{font-size: 3em;}
+  code{font-size: 1rem;}
+  footer.main-footer{width:62%}
+}
+
+
+
+
+header{
+  background: lightgrey;
+  color: #272727;
+}
+
+.site-header-main-menu{
+  ul{list-style:none;}
+  a{color: midnightblue;}
+  a:hover{color: slateblue;}
+}
+
+.search-menu-form{
+  flex-wrap: wrap;
+  input{max-width: 62%;}
+  button{border-color: midnightblue;}
+  button:hover
+   {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 40px 40px slateblue inset;
+
+  }
+}
+
+.intro{
+  margin: 0 1em;
+  font-size: clamp(1rem, 8vw - 2rem, 1.24rem);
+}
+
+button{
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid red;
+  border-radius: 0.6em;
+  color: red;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 0.62em;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.4em;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+}
+
+button:hover
+   {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 40px 40px red inset;
+
+  }
+  
+  .search-menu-form{
+    justify-content: flex-start;
+  }
