@@ -9,7 +9,8 @@ const path = require('path'),
 module.exports = {
   
   entry:{
-    index: './src/index.js'
+    index: './src/index.js',
+    test: './src/test.js'	  
     },
 
   devServer:{
@@ -19,8 +20,36 @@ module.exports = {
   plugins: [
     
     new HtmlWebpackPlugin({
+      meta: {
+        'charset':'utf-8',
+        'Compat':{'http-equiv':'X-UA-Compatible','content': 'IE=edge'},
+	'opengraphimg':{'property':'og:image','content': ''},
+	'opengraphurl':{'property':'og:url','content': ''},
+        'decription':'webapp',
+        'decription':'webapp',
+        'keywords':'webapp',
+        'viewport':'width=device-width, initial-scale=1',
+      },
       title: 'WebMode',
       template: './src/index.html',
+      inject: 'head',
+      chunks: ['index'],
+    }),
+    new HtmlWebpackPlugin({
+      meta: {
+        'charset':'utf-8',
+        'Compat':{'http-equiv':'X-UA-Compatible','content': 'IE=edge'},
+	'opengraphimg':{'property':'og:image','content': ''},
+	'opengraphurl':{'property':'og:url','content': ''},
+        'decription':'webapp test page',
+        'keywords':'webapp test',
+        'viewport':'width=device-width, initial-scale=1',
+      },
+      title: 'WebMode Test Page',
+      filename: 'test.html',
+      template: './src/test.html',
+      inject: 'head',
+      chunks: ['test'],
     }),
     
     new ESLintPlugin(),//Now, all source code that goes through Weback will be checked by ESLint automatically.
@@ -42,7 +71,7 @@ module.exports = {
   },
   
   optimization: {
-    runtimeChunk: 'single',
+    //runtimeChunk: 'single',
   },
   
   module: {
@@ -58,6 +87,16 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
+      {
+	// https://webpack.js.org/guides/asset-modules/#replacing-inline-loader-syntax
+        resourceQuery: /raw/,
+        type: 'asset/source'
+      },
+      {
+        // https://webpack.js.org/loaders/html-loader/#usage
+        resourceQuery: /template/,
+        loader: 'html-loader'
+      }
     ],
     
   },

@@ -1,0 +1,50 @@
+     <header role="banner" class="site-header">
+        <a class="site-logo" href="/" rel="home" title="to homepage">
+            <!-- link to home: http://microformats.org/wiki/rel-home -->
+            <img alt="webmode logo"
+              style="display:inline; vertical-align: middle"
+              src="../static/img/webmode_logo.svg"
+              onerror="this.src='a11y-boilerplate.png;'"
+              width="100" height="100"
+                    />
+                <!-- vector image with bitmap fallback: https://twitter.com/scottjehl/status/369190249437483008 -->
+                <!-- specify image dimensions for performance: http://www.feedthebot.com/pagespeed/image-dimensions.html -->
+            <h1 class="fluid-type" style="display: inline-block;vertical-align: middle">Webmode</h1>
+        </a>
+
+
+        <!-- Quick menu (skipnav) to directly jump to specific sections: http://www.jimthatcher.com/skipnav.htm -->
+        <nav class="site-header-quick-menu">
+            <h2 class="a11y-sr-only">Quick menu</h2>
+            <ul class="flat-list a11y-sr-only">
+                <li><a class="menu-link a11y-kb-only" href="#content">Jump to content</a></li>
+                <li><a class="menu-link a11y-kb-only" href="#main-menu">Jump to main menu</a></li>
+                <li><a class="menu-link a11y-kb-only" href="#search">Jump to search</a></li>
+                <li><a class="menu-link a11y-kb-only" href="#user">Jump to user menu</a></li>
+            </ul>
+        </nav>
+        <nav class="site-header-main-menu">
+            <ul class="flx">
+              <li><a class="menu-link" href="#content">How it works</a></li>
+              <li><a class="menu-link" href="#user">Log In</a></li>
+              <li><a class="menu-link" href="./test.html">Test</a></li>
+              <li><!-- Mark search controls for enhanced a11y: http://www.w3.org/TR/wai-aria/roles#search -->
+                <div role="search" class="search-menu">
+                  <a id="search" rel="search" href="https://example.com/search">
+                    <span class="icon-search"></span>
+                    <span class="a11y-sr-only">Search</span>
+                  </a>
+                  <form method="GET" action="https://www.example.com/search" class="search-menu-form flx">
+                    <label>
+                      <span class="a11y-sr-only">Keywords</span>
+                      <input type="search" name="q" placeholder="keyword(s)" />
+                    </label>
+                    <button>
+                      <span class="icon-search"></span>
+                      <span class="a11y-sr-only">Search on example.com</span>
+                    </button>
+                  </form>
+                </div>
+            </ul>
+        </nav>
+    </header>

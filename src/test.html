@@ -3,9 +3,12 @@
 <head prefix="og: http://ogp.me/ns#"><!-- enable Open Graph: http://ogp.me/ -->
 
     <!-- charset & http-equiv may be set via response header: https://github.com/h5bp/html5-boilerplate/blob/master/doc/html.md#x-ua-compatible -->
-    <!--metatags added by webpack. see build/utils common  -->
+    <title>WebMode Test Page</title>
+    <meta property="og:image" content="">
+    <meta property="og:url"   content="">
     <!-- optionally add more Open Graph metadata: http://ogp.me/#metadata -->
-    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
     <!-- Enable styling differentation between JavaScript and non-JavaScript enabled browsers -->
@@ -37,18 +40,21 @@
  </style>
 </head>
 <body>
-<%= require('./html_parts/head.html?raw') %>
-  <main id="content" role="main" tabindex="-1">
-  <!-- tabindex fixes focus issue, alternatively use generic script: http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/ -->
-  <!-- @todo: add nav[role="navigation"] as TOC -->
-  <p class="intro">WebMode transpiles modern JavaScript with Babel and loads styles from Sass/PostCSS. It's opinionated yet minimalist, adding no frameworks or libraries. Mode also copies static assets such as images and <a href="static/documents/mode.pdf">documents</a> with a dedicated /static directory.
-    
-    <article class="block">
-      <h2>How to use</h2>
-      <p><code>npm start</code> to run in dev mode.
-      <br><code>npm run build</code> for a production build into a /dist directory, with a main.css stylesheet.
-     </article>
-   </main>
-<%= require('./html_parts/footer.html?raw') %>
+	  <%= require('./html_parts/head.html?raw') %>
+
+
+    <main id="content" role="main" tabindex="-1">
+        <!-- tabindex fixes focus issue, alternatively use generic script: http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/ -->
+
+        <!-- @todo: add nav[role="navigation"] as TOC -->
+        
+        <p class="intro">This is a test page, to demonstrate how a separate html page can be added using the HTML webpack plugin.
+	</p>
+	
+              <article class="block">
+    </article>
+	  <%= require('./html_parts/footer.html?raw') %>
+	
 </body>
 </html>
+    
