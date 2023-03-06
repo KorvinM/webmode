@@ -3,14 +3,7 @@
 <head prefix="og: http://ogp.me/ns#"><!-- enable Open Graph: http://ogp.me/ -->
 
     <!-- charset & http-equiv may be set via response header: https://github.com/h5bp/html5-boilerplate/blob/master/doc/html.md#x-ua-compatible -->
-    <title>WebMode Test Page</title>
-    <meta property="og:image" content="">
-    <meta property="og:url"   content="">
-    <!-- optionally add more Open Graph metadata: http://ogp.me/#metadata -->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
-    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-
+    <title><%= htmlWebpackPlugin.options.title %></title>
     <!-- Enable styling differentation between JavaScript and non-JavaScript enabled browsers -->
     <script>(function (e) { e.className = e.className.replace('no-js', 'js'); }(document.documentElement));</script>
 
@@ -40,21 +33,16 @@
  </style>
 </head>
 <body>
-	  <%= require('./html_parts/head.html?raw') %>
-
-
-    <main id="content" role="main" tabindex="-1">
-        <!-- tabindex fixes focus issue, alternatively use generic script: http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/ -->
-
-        <!-- @todo: add nav[role="navigation"] as TOC -->
-        
-        <p class="intro">This is a test page, to demonstrate how a separate html page can be added using the HTML webpack plugin.
-	</p>
-	
-              <article class="block">
+<%= require('./html_parts/header.html?raw') %>
+  <main id="content" role="main" tabindex="-1">
+  <!-- tabindex fixes focus issue, alternatively use generic script: http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/ -->
+  <!-- @todo: add nav[role="navigation"] as TOC -->
+    <p class="intro">This is a test page, to demonstrate how a separate html page can be added using the HTML webpack plugin.
+    </p>
+    <article class="block">
     </article>
-	  <%= require('./html_parts/footer.html?raw') %>
-	
+  </main>
+  <%= require('./html_parts/footer.html?raw') %>
 </body>
 </html>
     
